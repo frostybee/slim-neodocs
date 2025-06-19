@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rg:*)",
+      "Bash(npm run docusaurus:*)",
+      "Bash(rm:*)",
+      "Bash(cp:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(sed:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run clear:*)",
+      "Bash(npm run start:*)"
+    ],
+    "deny": []
+  }
+}

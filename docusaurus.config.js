@@ -51,7 +51,23 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/slimphp/slim-neodocs/tree/main/',
+          // Versioning
+          // lastVersion: 'current',
+          // versions: {
+          //   current: {
+          //     label: '4.x',
+          //     path: 'v4',
+          //   },
+          //   // '3.x': {
+          //   //   label: '3.x',
+          //   //   path: 'v3',
+          //   // },
+          //   // '2.x': {
+          //   //   label: '2.x', 
+          //   //   path: 'v2',
+          //   // },
+          // },
         },
         blog: {
           showReadingTime: true,
@@ -92,6 +108,11 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Documentation',
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'left',
+            dropdownActiveClassDisabled: true,
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -150,6 +171,8 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ['php'],
+        wrapLongLines: true,
       },
     }),
 };
