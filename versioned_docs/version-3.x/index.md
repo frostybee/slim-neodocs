@@ -87,13 +87,9 @@ before venturing into specific topics like request and response handling,
 routing, and error handling.
 
 ## Documentation License
-<p style="text-align: left;">
-    This website and documentation is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
-    <br />
-    <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
-    </a>
-</p>
+This website and documentation is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+[![Creative Commons License](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 [symfony]: https://symfony.com/
 [laravel]: https://laravel.com/
