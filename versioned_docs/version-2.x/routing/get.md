@@ -4,11 +4,13 @@ title: GET
 Use the Slim application's `get()` method to map a callback function to a resource URI that is requested with
 the HTTP GET method.
 
-    <?php
-    $app = new \Slim\Slim();
-    $app->get('/books/:id', function ($id) {
-        //Show book identified by $id
-    });
+```php
+<?php
+$app = new \Slim\Slim();
+$app->get('/books/:id', function ($id) {
+    //Show book identified by $id
+});
+```
 
 In this example, an HTTP GET request for “/books/1” will invoke the associated callback function, passing “1” as the
 callback's argument.

@@ -4,11 +4,13 @@ title: PUT
 Use the Slim application's `put()` method to map a callback function to a resource URI that is requested with
 the HTTP PUT method.
 
-    <?php
-    $app = new \Slim\Slim();
-    $app->put('/books/:id', function ($id) {
-        //Update book identified by $id
-    });
+```php
+<?php
+$app = new \Slim\Slim();
+$app->put('/books/:id', function ($id) {
+    //Update book identified by $id
+});
+```
 
 In this example, an HTTP PUT request for “/books/1” will invoke the associated callback function, passing "1" as
 the callback function's argument.

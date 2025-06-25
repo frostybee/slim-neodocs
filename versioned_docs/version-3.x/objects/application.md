@@ -80,37 +80,31 @@ $settings->replace([
 
 Slim has the following default settings that you can override:
 
-<dl>
-<dt><code>httpVersion</code></dt>
-    <dd>The protocol version used by the <a href="../objects/response">Response</a>
-        object.
-        <br>(Default: <code>'1.1'</code>)</dd>
-<dt><code>responseChunkSize</code></dt>
-    <dd>Size of each chunk read from the Response body when sending to the
-        browser.
-        <br>(Default: <code>4096</code>)</dd>
-<dt><code>outputBuffering</code></dt>
-    <dd>If <code>false</code>, then no output buffering is enabled. If <code>'append'</code>
-        or <code>'prepend'</code>, then any <code>echo</code> or <code>print</code>
-        statements are captured and are either appended or prepended to the Response
-        returned from the route callable.
-        <br>(Default: <code>'append'</code>)</dd>
-<dt><code>determineRouteBeforeAppMiddleware</code></dt>
-    <dd>When true, the route is calculated before any middleware is executed. This
-    means that you can inspect route parameters in middleware if you need to.
-    <br>(Default: <code>false</code>)</dd>
-<dt><code>displayErrorDetails</code></dt>
-    <dd>When true, additional information about exceptions are displayed by the
-    <a href="../handlers/error">default error handler</a>.
-    <br>(Default: <code>false</code>)</dd>
-<dt><code>addContentLengthHeader</code></dt>
-    <dd>When true, Slim will add a <code>Content-Length</code> header to the response.
-    If you are using a runtime analytics tool, such as New Relic, then this should be disabled.
-    <br>(Default: <code>true</code>)</dd>
-<dt><code>routerCacheFile</code></dt>
-    <dd>Filename for caching the FastRoute routes. Must be set to a valid filename within
-    a writeable directory. If the file does not exist, then it is created with the correct cache
-    information on first run.<br>
-    Set to <code>false</code> to disable the FastRoute cache system.
-    <br>(Default: <code>false</code>)</dd>
-</dl>
+**`httpVersion`**
+: The protocol version used by the [Response](../objects/response) object.
+  (Default: `'1.1'`)
+
+**`responseChunkSize`**
+: Size of each chunk read from the Response body when sending to the browser.
+  (Default: `4096`)
+
+**`outputBuffering`**
+: If `false`, then no output buffering is enabled. If `'append'` or `'prepend'`, then any `echo` or `print` statements are captured and are either appended or prepended to the Response returned from the route callable.
+  (Default: `'append'`)
+
+**`determineRouteBeforeAppMiddleware`**
+: When true, the route is calculated before any middleware is executed. This means that you can inspect route parameters in middleware if you need to.
+  (Default: `false`)
+
+**`displayErrorDetails`**
+: When true, additional information about exceptions are displayed by the [default error handler](../handlers/error).
+  (Default: `false`)
+
+**`addContentLengthHeader`**
+: When true, Slim will add a `Content-Length` header to the response. If you are using a runtime analytics tool, such as New Relic, then this should be disabled.
+  (Default: `true`)
+
+**`routerCacheFile`**
+: Filename for caching the FastRoute routes. Must be set to a valid filename within a writeable directory. If the file does not exist, then it is created with the correct cache information on first run.
+  Set to `false` to disable the FastRoute cache system.
+  (Default: `false`)

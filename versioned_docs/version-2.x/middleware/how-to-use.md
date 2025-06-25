@@ -8,33 +8,37 @@ surround previously added middleware, or the Slim application itself if no middl
 
 This example middleware will capitalize the Slim application's HTTP response body.
 
-    <?php
-    class AllCapsMiddleware extends \Slim\Middleware
+```php
+<?php
+class AllCapsMiddleware extends \Slim\Middleware
+{
+    public function call()
     {
-        public function call()
-        {
-            // Get reference to application
-            $app = $this->app;
+        // Get reference to application
+        $app = $this->app;
 
-            // Run inner middleware and application
-            $this->next->call();
+        // Run inner middleware and application
+        $this->next->call();
 
-            // Capitalize response body
-            $res = $app->response;
-            $body = $res->getBody();
-            $res->setBody(strtoupper($body));
-        }
+        // Capitalize response body
+        $res = $app->response;
+        $body = $res->getBody();
+        $res->setBody(strtoupper($body));
     }
+}
+```
 
 ### Add Middleware
 
-    <?php
-    $app = new \Slim\Slim();
-    $app->add(new \AllCapsMiddleware());
-    $app->get('/foo', function () use ($app) {
-        echo "Hello";
-    });
-    $app->run();
+```php
+<?php
+$app = new \Slim\Slim();
+$app->add(new \AllCapsMiddleware());
+$app->get('/foo', function () use ($app) {
+    echo "Hello";
+});
+$app->run();
+```
 
 The Slim application’s `add()` method accepts one argument: a middleware instance. If the middleware instance requires
 special configuration, it may implement its own constructor so that it may be configured before it is added to the

@@ -2,7 +2,7 @@
 title: Contributor Guidelines
 ---
 
-I encourage everyone to contribute to the Slim Framework project. You can find the latest code on GitHub at <https://github.com/slimphp/Slim>.
+I encourage everyone to contribute to the Slim Framework project. You can find the latest code on GitHub at [https://github.com/slimphp/Slim](https://github.com/slimphp/Slim).
 
 ## Issue Tracker
 

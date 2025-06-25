@@ -8,18 +8,20 @@ to **slim.errors** whenever an Exception is caught or the log object is manually
 If you want to redirect error output to a different location, you can define your own writable resource by
 modifying the Slim application’s environment settings. I recommend you use middleware to update the environment:
 
-    <?php
-    class CustomErrorMiddleware extends \Slim\Middleware
+```php
+<?php
+class CustomErrorMiddleware extends \Slim\Middleware
+{
+    public function call()
     {
-        public function call()
-        {
-            // Set new error output
-            $env = $this->app->environment;
-            $env['slim.errors'] = fopen('/path/to/output', 'w');
+        // Set new error output
+        $env = $this->app->environment;
+        $env['slim.errors'] = fopen('/path/to/output', 'w');
 
-            // Call next middleware
-            $this->next->call();
-        }
+        // Call next middleware
+        $this->next->call();
     }
+}
+```
 
 Remember, **slim.errors** does not have to point to a file; it can point to any valid writable resource.

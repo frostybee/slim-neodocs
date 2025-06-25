@@ -27,17 +27,21 @@ not be changed afterward.
 
 If Slim sees an environment variable named "SLIM_MODE", it will set the application mode to that variable’s value.
 
-    <?php
-    $_ENV['SLIM_MODE'] = 'production';
+```php
+<?php
+$_ENV['SLIM_MODE'] = 'production';
+```
 
 #### Use application setting
 
 If an environment variable is not found, Slim will next look for the mode in the application settings.
 
-    <?php
-    $app = new \Slim\Slim(array(
-        'mode' => 'production'
-    ));
+```php
+<?php
+$app = new \Slim\Slim(array(
+    'mode' => 'production'
+));
+```
 
 #### Default mode
 
@@ -53,24 +57,26 @@ Assume the current application mode is “production”. Only the callable assoc
 be invoked. The callable associated with the “development” mode will be ignored until the application mode is
 changed to “development”.
 
-    <?php
-    // Set the current mode
-    $app = new \Slim\Slim(array(
-        'mode' => 'production'
+```php
+<?php
+// Set the current mode
+$app = new \Slim\Slim(array(
+    'mode' => 'production'
+));
+
+// Only invoked if mode is "production"
+$app->configureMode('production', function () use ($app) {
+    $app->config(array(
+        'log.enable' => true,
+        'debug' => false
     ));
+});
 
-    // Only invoked if mode is "production"
-    $app->configureMode('production', function () use ($app) {
-        $app->config(array(
-            'log.enable' => true,
-            'debug' => false
-        ));
-    });
-
-    // Only invoked if mode is "development"
-    $app->configureMode('development', function () use ($app) {
-        $app->config(array(
-            'log.enable' => false,
-            'debug' => true
-        ));
-    });
+// Only invoked if mode is "development"
+$app->configureMode('development', function () use ($app) {
+    $app->config(array(
+        'log.enable' => false,
+        'debug' => true
+    ));
+});
+```

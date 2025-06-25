@@ -21,24 +21,26 @@ The purpose of middleware is to inspect, analyze, or modify the application envi
 before and/or after the Slim application is invoked. It is easy for each middleware to obtain references to the
 primary Slim application, its environment, its request, and its response:
 
-    <?php
-    class MyMiddleware extends \Slim\Middleware
+```php
+<?php
+class MyMiddleware extends \Slim\Middleware
+{
+    public function call()
     {
-        public function call()
-        {
-            //The Slim application
-            $app = $this->app;
+        //The Slim application
+        $app = $this->app;
 
-            //The Environment object
-            $env = $app->environment;
+        //The Environment object
+        $env = $app->environment;
 
-            //The Request object
-            $req = $app->request;
+        //The Request object
+        $req = $app->request;
 
-            //The Response object
-            $res = $app->response;
-        }
+        //The Response object
+        $res = $app->response;
     }
+}
+```
 
 Changes made to the environment, request, and response objects will propagate immediately throughout the application
 and its other middleware layers. This is possible because every middleware layer is given a reference to the same
@@ -52,12 +54,14 @@ to complete its full lifecycle. If a middleware layer chooses **not** to call th
 further inner middleware and the Slim application itself will not be run, and the application response will
 be returned to the HTTP client as is.
 
-    <?php
-    class MyMiddleware extends \Slim\Middleware
+```php
+<?php
+class MyMiddleware extends \Slim\Middleware
+{
+    public function call()
     {
-        public function call()
-        {
-            //Optionally call the next middleware
-            $this->next->call();
-        }
+        //Optionally call the next middleware
+        $this->next->call();
     }
+}
+```

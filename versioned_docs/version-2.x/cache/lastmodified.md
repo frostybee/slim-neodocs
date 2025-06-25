@@ -15,8 +15,10 @@ method in your route callback passing in a UNIX timestamp of the last modificati
 Be sure the `lastModified()` method’s timestamp updates along with the resource’s last modification date; otherwise,
 the browser client will continue serving its outdated cache.
 
-    <?php
-    $app->get('/foo', function () use ($app) {
-        $app->lastModified(1286139652);
-        echo "This will be cached after the initial request!";
-    });
+```php
+<?php
+$app->get('/foo', function () use ($app) {
+    $app->lastModified(1286139652);
+    echo "This will be cached after the initial request!";
+});
+```

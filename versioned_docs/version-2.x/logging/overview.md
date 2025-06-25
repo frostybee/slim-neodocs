@@ -8,8 +8,10 @@ delegated to a log writer.
 
 To log data in a Slim application, get a reference to the log object:
 
-    <?php
-    $log = $app->log;
+```php
+<?php
+$log = $app->log;
+```
 
 The log object provides the following PSR-3 interface
 

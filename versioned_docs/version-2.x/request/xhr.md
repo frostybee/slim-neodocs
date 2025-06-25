@@ -9,6 +9,8 @@ is an XMLHttpRequest by setting a GET, POST, or PUT parameter in the HTTP reques
 
 Use the request object's `isAjax()` or `isXhr()` method to tell if the current request is an XHR/Ajax request:
 
-    <?php
-    $isXHR = $app->request->isAjax();
-    $isXHR = $app->request->isXhr();
+```php
+<?php
+$isXHR = $app->request->isAjax();
+$isXHR = $app->request->isXhr();
+```

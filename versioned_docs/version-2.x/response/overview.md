@@ -7,9 +7,11 @@ the `\Slim\Http\Response` class is idempotent; you may instantiate the class at 
 your Slim application) without affecting the application as a whole. You can obtain a reference to the Slim
 application’s response object with:
 
-    <?php
-    $app = new \Slim\Slim();
-    $app->response;
+```php
+<?php
+$app = new \Slim\Slim();
+$app->response;
+```
 
 An HTTP response has three primary properties:
 

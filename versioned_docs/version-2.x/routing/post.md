@@ -4,11 +4,13 @@ title: POST
 Use the Slim application's `post()` method to map a callback function to a resource URI that is requested with
 the HTTP POST method.
 
-    <?php
-    $app = new \Slim\Slim();
-    $app->post('/books', function () {
-        //Create book
-    });
+```php
+<?php
+$app = new \Slim\Slim();
+$app->post('/books', function () {
+    //Create book
+});
+```
 
 In this example, an HTTP POST request for “/books” will invoke the associated callback function
 

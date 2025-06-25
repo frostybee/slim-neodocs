@@ -9,11 +9,13 @@ Slim/Middleware/SessionCookie.php).
 This example is the simplest implementation of Slim application middleware. It extends `\Slim\Middleware`,
 implements a public `call()` method, and calls the next inner middleware.
 
-    <?php
-    class MyMiddleware extends \Slim\Middleware
+```php
+<?php
+class MyMiddleware extends \Slim\Middleware
+{
+    public function call()
     {
-        public function call()
-        {
-            $this->next->call();
-        }
+        $this->next->call();
     }
+}
+```

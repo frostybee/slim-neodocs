@@ -5,11 +5,13 @@ Slim lets you assign conditions to route parameters. If the specified conditions
 For example, if you need a route with a second segment that must be a valid 4-digit year, you could enforce
 this condition like this:
 
-    <?php
-    $app = new \Slim\Slim();
-    $app->get('/archive/:year', function ($year) {
-        echo "You are viewing archives from $year";
-    })->conditions(array('year' => '(19|20)\d\d'));
+```php
+<?php
+$app = new \Slim\Slim();
+$app->get('/archive/:year', function ($year) {
+    echo "You are viewing archives from $year";
+})->conditions(array('year' => '(19|20)\d\d'));
+```
 
 Invoke the Route object's `conditions()` method. The first and only argument is an associative array with keys that
 match any of the route’s parameters and values that are regular expressions.
@@ -19,10 +21,12 @@ match any of the route’s parameters and values that are regular expressions.
 If many of your Slim application Routes accept the same parameters and use the same conditions, you can define
 default application-wide Route conditions like this:
 
-    <?php
-    \Slim\Route::setDefaultConditions(array(
-        'firstName' => '[a-zA-Z]{3,}'
-    ));
+```php
+<?php
+\Slim\Route::setDefaultConditions(array(
+    'firstName' => '[a-zA-Z]{3,}'
+));
+```
 
 Define application-wide route conditions before you define application routes. When you define a route, the route
 will automatically be assigned any application-wide Route conditions defined with `\Slim\Route::setDefaultConditions()`.
@@ -32,14 +36,18 @@ were defined.
 
 You may override a default route condition by redefining the route’s condition when you define the route, like this:
 
-    <?php
-    $app = new \Slim\Slim();
-    $app->get('/hello/:firstName', $callable)
-        ->conditions(array('firstName' => '[a-z]{10,}'));
+```php
+<?php
+$app = new \Slim\Slim();
+$app->get('/hello/:firstName', $callable)
+    ->conditions(array('firstName' => '[a-z]{10,}'));
+```
 
 You may append new conditions to a given route like this:
 
-    <?php
-    $app = new \Slim\Slim();
-    $app->get('/hello/:firstName/:lastName', $callable)
-        ->conditions(array('lastName' => '[a-z]{10,}'));
+```php
+<?php
+$app = new \Slim\Slim();
+$app->get('/hello/:firstName/:lastName', $callable)
+    ->conditions(array('lastName' => '[a-z]{10,}'));
+```

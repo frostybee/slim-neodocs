@@ -48,26 +48,28 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          sidebarCollapsed: false, // Start with sidebar categories expanded
+          sidebarCollapsible: true, // Allow sidebar to be collapsible
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/slimphp/slim-neodocs/tree/main/',
           // Versioning
-          // lastVersion: 'current',
-          // versions: {
-          //   current: {
-          //     label: '4.x',
-          //     path: 'v4',
-          //   },
-          //   // '3.x': {
-          //   //   label: '3.x',
-          //   //   path: 'v3',
-          //   // },
-          //   // '2.x': {
-          //   //   label: '2.x', 
-          //   //   path: 'v2',
-          //   // },
-          // },
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: '4.x',
+              path: 'v4',
+            },
+            // '3.x': {
+            //   label: '3.x',
+            //   path: 'v3',
+            // },
+            '2.x': {
+              label: '2.x', 
+              path: 'v2',
+            },
+          },
         },
         blog: {
           showReadingTime: true,

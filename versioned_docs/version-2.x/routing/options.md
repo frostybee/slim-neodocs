@@ -4,11 +4,13 @@ title: OPTIONS
 Use the Slim application's `options()` method to map a callback function to a resource URI that is requested with
 the HTTP OPTIONS method.
 
-    <?php
-    $app = new \Slim\Slim();
-    $app->options('/books/:id', function ($id) {
-        //Return response headers
-    });
+```php
+<?php
+$app = new \Slim\Slim();
+$app->options('/books/:id', function ($id) {
+    //Return response headers
+});
+```
 
 In this example, an HTTP OPTIONS request for “/books/1” will invoke the associated callback function, passing "1" as
 the callback function's argument.

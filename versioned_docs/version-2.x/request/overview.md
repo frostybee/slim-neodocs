@@ -7,6 +7,8 @@ Slim application includes a default request object, the `\Slim\Http\Request` cla
 instantiate the class at will (in middleware or elsewhere in your Slim application) without affecting the application
 as a whole. You can obtain a reference to the Slim application’s request object like this:
 
-    <?php
-    // Returns instance of \Slim\Http\Request
-    $request = $app->request;
+```php
+<?php
+// Returns instance of \Slim\Http\Request
+$request = $app->request;
+```

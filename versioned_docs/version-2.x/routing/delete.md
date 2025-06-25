@@ -4,11 +4,13 @@ title: DELETE
 Use the Slim application's `delete()` method to map a callback function to a resource URI that is requested with
 the HTTP DELETE method.
 
-    <?php
-    $app = new \Slim\Slim();
-    $app->delete('/books/:id', function ($id) {
-        //Delete book identified by $id
-    });
+```php
+<?php
+$app = new \Slim\Slim();
+$app->delete('/books/:id', function ($id) {
+    //Delete book identified by $id
+});
+```
 
 In this example, an HTTP DELETE request for “/books/1” will invoke the associated callback function, passing "1" as
 the callback function's argument.

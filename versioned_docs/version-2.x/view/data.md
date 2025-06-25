@@ -15,17 +15,21 @@ available to view templates. View data is stored internally as a key-value array
 The view object's `setData()` instance method will overwrite existing view data. You may use this method to set a
 single variable to a given value:
 
-    <?php
-    $app->view->setData('color', 'red');
+```php
+<?php
+$app->view->setData('color', 'red');
+```
 
 The view’s data will now contain a key “color” with value “red”. You may also use the view’s `setData()` method
 to batch assign an entire array of data:
 
-    <?php
-    $app->view->setData(array(
-        'color' => 'red',
-        'size' => 'medium'
-    ));
+```php
+<?php
+$app->view->setData(array(
+    'color' => 'red',
+    'size' => 'medium'
+));
+```
 
 Remember, the view’s `setData()` method will replace all previous data.
 
@@ -34,7 +38,9 @@ Remember, the view’s `setData()` method will replace all previous data.
 The view object also has a `appendData()` method that appends data to the view’s existing data. This method accepts
 an array as its one and only argument:
 
-    <?php
-    $app->view->appendData(array(
-        'foo' => 'bar'
-    ));
+```php
+<?php
+$app->view->appendData(array(
+    'foo' => 'bar'
+));
+```

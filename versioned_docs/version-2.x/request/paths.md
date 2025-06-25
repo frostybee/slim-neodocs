@@ -24,14 +24,16 @@ is **/books/1** (the path to the application resource).
 You can get the HTTP request’s root URI and resource URI with the request object's
 `getRootUri()` and `getResourceUri()` methods:
 
-    <?php
-    $app = new \Slim\Slim();
+```php
+<?php
+$app = new \Slim\Slim();
 
-    // Get request object
-    $req = $app->request;
+// Get request object
+$req = $app->request;
 
-    //Get root URI
-    $rootUri = $req->getRootUri();
+//Get root URI
+$rootUri = $req->getRootUri();
 
-    //Get resource URI
-    $resourceUri = $req->getResourceUri();
+//Get resource URI
+$resourceUri = $req->getResourceUri();
+```

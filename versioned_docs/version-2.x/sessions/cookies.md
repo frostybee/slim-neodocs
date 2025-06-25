@@ -5,19 +5,21 @@ You may also use the `\Slim\Middleware\SessionCookie` middleware to persist sess
 HTTP cookies. To enable the session cookie middleware, add the `\Slim\Middleware\SessionCookie` middleware to your
 Slim application:
 
-    <?php
-    $app = new Slim();
-    $app->add(new \Slim\Middleware\SessionCookie(array(
-        'expires' => '20 minutes',
-        'path' => '/',
-        'domain' => null,
-        'secure' => false,
-        'httponly' => false,
-        'name' => 'slim_session',
-        'secret' => 'CHANGE_ME',
-        'cipher' => MCRYPT_RIJNDAEL_256,
-        'cipher_mode' => MCRYPT_MODE_CBC
-    )));
+```php
+<?php
+$app = new Slim();
+$app->add(new \Slim\Middleware\SessionCookie(array(
+    'expires' => '20 minutes',
+    'path' => '/',
+    'domain' => null,
+    'secure' => false,
+    'httponly' => false,
+    'name' => 'slim_session',
+    'secret' => 'CHANGE_ME',
+    'cipher' => MCRYPT_RIJNDAEL_256,
+    'cipher_mode' => MCRYPT_MODE_CBC
+)));
+```
 
 The second argument is optional; it is shown here so you can see the default middleware settings. The session cookie
 middleware will work seamlessly with the `$_SESSION` superglobal so you can easily migrate to this session storage

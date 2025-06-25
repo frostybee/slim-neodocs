@@ -9,9 +9,11 @@ expiration date is reached, at which time the HTTP client will send a conditiona
 
 The `expires()` method accepts one argument: an integer UNIX timestamp, or a string to be parsed with `strtotime()`.
 
-    <?php
-    $app->get('/foo', function () use ($app) {
-        $app->etag('unique-resource-id');
-        $app->expires('+1 week');
-        echo "This will be cached client-side for one week";
-    });
+```php
+<?php
+$app->get('/foo', function () use ($app) {
+    $app->etag('unique-resource-id');
+    $app->expires('+1 week');
+    echo "This will be cached client-side for one week";
+});
+```

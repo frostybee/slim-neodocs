@@ -41,12 +41,16 @@ but will accept `\Slim\Log::WARN`, `\Slim\Log::ERROR`, and `\Slim\Log::CRITICAL`
 
 ### How to set the log level
 
-    <?php
-    $app->log->setLevel(\Slim\Log::WARN);
+```php
+<?php
+$app->log->setLevel(\Slim\Log::WARN);
+```
 
 You can set the log object’s level during application instantiation, too:
 
-    <?php
-    $app = new \Slim\Slim(array(
-        'log.level' => \Slim\Log::WARN
-    ));
+```php
+<?php
+$app = new \Slim\Slim(array(
+    'log.level' => \Slim\Log::WARN
+));
+```

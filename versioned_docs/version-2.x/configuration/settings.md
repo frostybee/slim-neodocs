@@ -11,10 +11,12 @@ The application mode is declared during instantiation, either as an environment 
 Slim application constructor. It cannot be changed afterward. The mode may be anything you want — "development",
 "test", and "production" are typical, but you are free to use anything you want (e.g. "foo").
 
-    <?php
-    $app = new \Slim\Slim(array(
-        'mode' => 'development'
-    ));
+```php
+<?php
+$app = new \Slim\Slim(array(
+    'mode' => 'development'
+));
+```
 
 Data Type
 : string
@@ -32,10 +34,12 @@ If debugging is enabled, Slim will use its built-in error handler to display dia
 Exceptions. If debugging is disabled, Slim will instead invoke your custom error handler, passing it the otherwise
 uncaught Exception as its first and only argument.
 
-    <?php
-    $app = new \Slim\Slim(array(
-        'debug' => true
-    ));
+```php
+<?php
+$app = new \Slim\Slim(array(
+    'debug' => true
+));
+```
 
 Data Type
 : boolean
@@ -55,15 +59,17 @@ destination (e.g. a text file, a database, or a remote web service).
 
 To specify a custom log writer after instantiation you must access Slim's logger directly and use its `setWriter()` method:
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'log.writer' => new \My\LogWriter()
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'log.writer' => new \My\LogWriter()
+));
 
-    // After instantiation
-    $log = $app->getLog();
-    $log->setWriter(new \My\LogWriter());
+// After instantiation
+$log = $app->getLog();
+$log->setWriter(new \My\LogWriter());
+```
 
 Data Type
 : mixed
@@ -94,15 +100,17 @@ error, and fatal messages will be logged.
 
 To change this setting after instantiation you must access Slim's logger directly and use its `setLevel()` method.
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'log.level' => \Slim\Log::DEBUG
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'log.level' => \Slim\Log::DEBUG
+));
 
-    // After instantiation
-    $log = $app->getLog();
-    $log->setLevel(\Slim\Log::WARN);
+// After instantiation
+$log = $app->getLog();
+$log->setLevel(\Slim\Log::WARN);
+```
 
 Data Type
 : integer
@@ -115,15 +123,17 @@ Default Value
 This enables or disables Slim's logger. To change this setting after instantiation you need to access Slim's logger
 directly and use its `setEnabled()` method.
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'log.enabled' => true
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'log.enabled' => true
+));
 
-    // After instantiation
-    $log = $app->getLog();
-    $log->setEnabled(true);
+// After instantiation
+$log = $app->getLog();
+$log->setEnabled(true);
+```
 
 Data Type
 : boolean
@@ -139,15 +149,17 @@ This path is referenced by the Slim application's View to fetch and render templ
 To change this setting after instantiation you need to access Slim's view directly and use its `setTemplatesDirectory()`
 method.
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'templates.path' => './templates'
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'templates.path' => './templates'
+));
 
-    // After instantiation
-    $view = $app->view();
-    $view->setTemplatesDirectory('./templates');
+// After instantiation
+$view = $app->view();
+$view->setTemplatesDirectory('./templates');
+```
 
 Data Type
 : string
@@ -160,14 +172,16 @@ Default Value
 The View class or instance used by the Slim application. To change this setting after instantiation you need to
 use the Slim application's `view()` method.
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'view' => new \My\View()
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'view' => new \My\View()
+));
 
-    // After instantiation
-    $app->view(new \My\View());
+// After instantiation
+$app->view(new \My\View());
+```
 
 Data Type
 : string|\Slim\View
@@ -179,10 +193,12 @@ Default Value
 
 Determines if the Slim app should encrypt its HTTP cookies.
 
-    <?php
-    $app = new \Slim\Slim(array(
-        'cookies.encrypt' => true
-    ));
+```php
+<?php
+$app = new \Slim\Slim(array(
+    'cookies.encrypt' => true
+));
+```
 
 Data Type
 : boolean
@@ -196,14 +212,16 @@ Determines the lifetime of HTTP cookies created by the Slim application. If this
 UNIX timestamp at which the cookie expires. If this is a string, it is parsed by the `strtotime()` function to extrapolate
 a valid UNIX timestamp at which the cookie expires.
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'cookies.lifetime' => '20 minutes'
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'cookies.lifetime' => '20 minutes'
+));
 
-    // After instantiation
-    $app->config('cookies.lifetime', '20 minutes');
+// After instantiation
+$app->config('cookies.lifetime', '20 minutes');
+```
 
 Data Type
 : integer|string
@@ -216,14 +234,16 @@ Default Value
 Determines the default HTTP cookie path if none is specified when invoking the Slim application's `setCookie()` or
 `setEncryptedCookie()` methods.
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'cookies.path' => '/'
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'cookies.path' => '/'
+));
 
-    // After instantiation
-    $app->config('cookies.path', '/');
+// After instantiation
+$app->config('cookies.path', '/');
+```
 
 Data Type
 : string
@@ -236,14 +256,16 @@ Default Value
 Determines the default HTTP cookie domain if none specified when invoking the Slim application's `setCookie()` or
 `setEncryptedCookie()` methods.
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'cookies.domain' => 'domain.com'
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'cookies.domain' => 'domain.com'
+));
 
-    // After instantiation
-    $app->config('cookies.domain', 'domain.com');
+// After instantiation
+$app->config('cookies.domain', 'domain.com');
+```
 
 Data Type
 : string
@@ -256,14 +278,16 @@ Default Value
 Determines whether or not cookies are delivered only via HTTPS. You may override this setting when invoking
 the Slim application's `setCookie()` or `setEncryptedCookie()` methods.
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'cookies.secure' => false
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'cookies.secure' => false
+));
 
-    // After instantiation
-    $app->config('cookies.secure', false);
+// After instantiation
+$app->config('cookies.secure', false);
+```
 
 Data Type
 : boolean
@@ -276,14 +300,16 @@ Default Value
 Determines whether cookies should be accessible through client side scripts (false = accessible). You may override this setting when invoking
 the Slim application's `setCookie()` or `setEncryptedCookie()` methods.
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'cookies.httponly' => false
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'cookies.httponly' => false
+));
 
-    // After instantiation
-    $app->config('cookies.httponly', false);
+// After instantiation
+$app->config('cookies.httponly', false);
+```
 
 Data Type
 : boolean
@@ -296,14 +322,16 @@ Default Value
 The secret key used for cookie encryption. You should change this setting if you use encrypted HTTP cookies
 in your Slim application.
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'cookies.secret_key' => 'secret'
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'cookies.secret_key' => 'secret'
+));
 
-    // After instantiation
-    $app->config('cookies.secret_key', 'secret');
+// After instantiation
+$app->config('cookies.secret_key', 'secret');
+```
 
 Data Type
 : string
@@ -315,14 +343,16 @@ Default Value
 
 The mcrypt cipher used for HTTP cookie encryption. See [available ciphers](http://php.net/manual/en/mcrypt.ciphers.php).
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'cookies.cipher' => MCRYPT_RIJNDAEL_256
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'cookies.cipher' => MCRYPT_RIJNDAEL_256
+));
 
-    // After instantiation
-    $app->config('cookies.cipher', MCRYPT_RIJNDAEL_256);
+// After instantiation
+$app->config('cookies.cipher', MCRYPT_RIJNDAEL_256);
+```
 
 Data Type
 : integer
@@ -334,14 +364,16 @@ Default Value
 
 The mcrypt cipher mode used for HTTP cookie encryption. See [available cipher modes](http://www.php.net/manual/en/mcrypt.constants.php).
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'cookies.cipher_mode' => MCRYPT_MODE_CBC
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'cookies.cipher_mode' => MCRYPT_MODE_CBC
+));
 
-    // After instantiation
-    $app->config('cookies.cipher_mode', MCRYPT_MODE_CBC);
+// After instantiation
+$app->config('cookies.cipher_mode', MCRYPT_MODE_CBC);
+```
 
 Data Type
 : integer
@@ -355,14 +387,16 @@ By default, Slim returns an HTTP/1.1 response to the client. Use this setting if
 response. This is useful if you use PHPFog or an nginx server configuration where you communicate with backend
 proxies rather than directly with the HTTP client.
 
-    <?php
-    // During instantiation
-    $app = new \Slim\Slim(array(
-        'http.version' => '1.1'
-    ));
+```php
+<?php
+// During instantiation
+$app = new \Slim\Slim(array(
+    'http.version' => '1.1'
+));
 
-    // After instantiation
-    $app->config('http.version', '1.1');
+// After instantiation
+$app->config('http.version', '1.1');
+```
 
 Data Type
 : string
