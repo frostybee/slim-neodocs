@@ -113,11 +113,7 @@ const sidebars = {
         'contributors/strategy',
         'contributors/guidelines',
       ],
-    },
-    // {
-    //   type: 'category',
-    //   label: 'Professional Support',      
-    // },
+    },    
   ],   
 };
 
