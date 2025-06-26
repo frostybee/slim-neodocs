@@ -246,7 +246,7 @@ be injected into a middleware. Make sure that the Slim
 DI container (e.g. PHP-DI) is properly configured to provide an instance of
 `Psr\Http\Message\ResponseFactoryInterface`.
 
-**Example:** PHP-DI definition using the `slim\psr7` package
+**Example:** PHP-DI definition using the `slim/psr7` package
 
 ```php
 use Psr\Container\ContainerInterface;
@@ -445,3 +445,4 @@ Here are a few unofficial lists to search.
 
 * [Github PSR-15: HTTP Server Request Handlers](https://github.com/topics/psr-15)
 * [middlewares/awesome-psr15-middlewares](https://github.com/middlewares/awesome-psr15-middlewares)
+

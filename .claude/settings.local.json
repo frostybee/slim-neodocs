@@ -3,7 +3,8 @@
     "allow": [
       "Bash(python3:*)",
       "Bash(rm:*)",
-      "Bash(rg:*)"
+      "Bash(rg:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": []
   }

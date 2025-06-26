@@ -36,7 +36,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: center;
+  /* align-items: center; */
   min-height: 60vh;
   position: relative;
   z-index: 2;
@@ -59,11 +59,12 @@
 }
 
 .siteTitle {
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   font-weight: 900;
   color: #719E40;
   margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
+  font-family: 'Poppins', sans-serif;  
   animation: fadeInUp 1s ease-out;
 }
 
@@ -118,6 +119,7 @@
 .primaryButton {
   background: #719E40 !important;
   border: none !important;
+  color: white !important;
   box-shadow: 0 4px 15px rgba(113, 158, 64, 0.4) !important;
   transition: all 0.3s ease !important;
   font-weight: 600 !important;
@@ -126,6 +128,7 @@
 .primaryButton:hover {
   transform: translateY(-2px) !important;
   box-shadow: 0 8px 25px rgba(113, 158, 64, 0.6) !important;
+  color: white !important;
 }
 
 .secondaryButton {

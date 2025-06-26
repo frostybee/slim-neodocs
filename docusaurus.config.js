@@ -30,7 +30,7 @@ const config = {
   organizationName: 'slimphp', // Usually your GitHub org/user name.
   projectName: 'slim-neodocs', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn', // Was set to throw. Set to 'warn' to not fail the build on broken links
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set

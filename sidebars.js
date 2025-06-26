@@ -38,6 +38,10 @@ const sidebars = {
       type: 'category',
       label: 'Concepts',
       collapsed: true,
+      link: {
+        type: 'doc',
+        id: 'concepts/index',
+      },
       items: [
         'concepts/life-cycle',
         'concepts/value-objects',
@@ -57,6 +61,10 @@ const sidebars = {
       type: 'category',
       label: 'HTTP Messages',
       collapsed: true,
+      link: {
+        type: 'doc',
+        id: 'objects/index',
+      },
       items: [
         'objects/request',
         'objects/response',
@@ -74,6 +82,10 @@ const sidebars = {
       type: 'category',
       label: 'Packaged Middleware',
       collapsed: true,
+      link: {
+        type: 'doc',
+        id: 'middleware/index',
+      },
       items: [
         'middleware/routing',
         'middleware/error-handling',
@@ -87,6 +99,10 @@ const sidebars = {
       type: 'category',
       label: 'Cook book',
       collapsed: true,
+      link: {
+        type: 'doc',
+        id: 'cookbook/index',
+      },
       items: [
         'cookbook/route-patterns',
         'cookbook/retrieving-current-route',
@@ -109,6 +125,10 @@ const sidebars = {
       type: 'category',
       label: 'Contributing',
       collapsed: true,
+      link: {
+        type: 'doc',
+        id: 'contributors/index',
+      },
       items: [
         'contributors/strategy',
         'contributors/guidelines',

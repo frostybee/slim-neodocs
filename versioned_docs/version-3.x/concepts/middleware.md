@@ -40,9 +40,7 @@ Response object exits the outermost middleware, is serialized into a raw HTTP
 response, and is returned to the HTTP client. Here's a diagram that illustrates
 the middleware process flow:
 
-<div style="padding: 2em 0; text-align: center">
-    <img src="../images/middleware.png" alt="Middleware architecture" style="max-width: 80%;"/>
-</div>
+![Middleware architecture](../images/middleware.png)
 
 ## How do I write middleware?
 
