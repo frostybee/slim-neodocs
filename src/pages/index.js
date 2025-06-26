@@ -8,17 +8,41 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero', styles.heroBanner)}>
+      <div className={styles.heroBackground}></div>
       <div className="container">
-        <div className={styles.siteTitle}>Slim</div>
-        <div className={styles.siteSlogan}>a micro framework for PHP</div>
-        <p className={styles.leadText}>
-          Slim is a PHP micro framework that helps you quickly write simple
-          yet powerful web applications and APIs.
-        </p>
-        <div className={styles.codeExample}>
-          <div className={styles.darkCodeBlock}>
-            <CodeBlock language="php">
+        <div className={styles.heroContent}>
+          <div className={styles.heroLeft}>
+            <div className={styles.titleContainer}>
+              <div className={styles.siteTitle}>Slim</div>
+              <div className={styles.siteSlogan}>a micro framework for PHP</div>
+            </div>
+            <p className={styles.leadText}>
+              Slim is a PHP micro framework that helps you quickly write simple
+              yet powerful web applications and APIs.
+            </p>
+            <div className={styles.featureHighlights}>
+              <div className={styles.highlight}>⚡ Fast & Lightweight</div>
+              <div className={styles.highlight}>🎯 PSR-7 Compatible</div>
+              <div className={styles.highlight}>🔧 Easy to Use</div>
+            </div>
+            <div className={styles.buttons}>
+              <Link
+                className={clsx("button button--primary button--lg", styles.primaryButton)}
+                to="/docs/v4">
+                Get Started
+              </Link>
+              <Link
+                className={clsx("button button--outline button--lg", styles.blogButton)}
+                to="/blog">
+                Blog
+              </Link>
+            </div>
+          </div>
+          <div className={styles.heroRight}>
+            <div className={styles.codeExample}>
+              <div className={styles.darkCodeBlock}>
+                <CodeBlock language="php" title="Hello World Example">
 {`<?php
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -35,15 +59,10 @@ $app->get('/hello/{name}', function (Request $request, Response $response, array
 });
 
 $app->run();`}
-            </CodeBlock>
+                </CodeBlock>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/v4">
-            Read the Documentation 📚
-          </Link>
         </div>
       </div>
     </header>

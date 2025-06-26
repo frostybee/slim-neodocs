@@ -61,10 +61,10 @@ const config = {
               label: '4.x',
               path: 'v4',
             },
-            // '3.x': {
-            //   label: '3.x',
-            //   path: 'v3',
-            // },
+            '3.x': {
+              label: '3.x',
+              path: 'v3',
+            },
             '2.x': {
               label: '2.x', 
               path: 'v2',
@@ -109,11 +109,11 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'docSidebar',
             position: 'left',
-            label: 'Documentation',
+            label: 'User Guide',
           },
           {
             type: 'docsVersionDropdown',
-            position: 'left',
+            position: 'right',
             dropdownActiveClassDisabled: true,
           },
           {to: '/blog', label: 'Blog', position: 'left'},
@@ -173,7 +173,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-        additionalLanguages: ['php'],
+        additionalLanguages: ['php', 'bash', 'json', 'javascript'],
         wrapLongLines: true,
       },
     }),
