@@ -21,3 +21,162 @@
   align-items: center;
   justify-content: center;
 }
+
+.siteTitle {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--ifm-hero-text-color);
+  margin-bottom: 0.5rem;
+}
+
+.siteSlogan {
+  font-size: 1.5rem;
+  color: var(--ifm-hero-text-color);
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.leadText {
+  font-size: 1.25rem;
+  color: var(--ifm-hero-text-color);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.codeExample {
+  margin: 2rem 0;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.codeExample pre {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.section {
+  padding: 4rem 0;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.sectionTitle span {
+  background: var(--ifm-background-color);
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.sectionTitle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--ifm-color-emphasis-300);
+  z-index: 0;
+}
+
+.feature {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.featureIcon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.center {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.darkCodeBlock :global(.prism-code) {
+  background-color: #282a36 !important;
+  color: #f8f8f2 !important;
+}
+
+.darkCodeBlock :global(.token.comment),
+.darkCodeBlock :global(.token.prolog),
+.darkCodeBlock :global(.token.doctype),
+.darkCodeBlock :global(.token.cdata) {
+  color: #6272a4 !important;
+}
+
+.darkCodeBlock :global(.token.punctuation) {
+  color: #f8f8f2 !important;
+}
+
+.darkCodeBlock :global(.token.property),
+.darkCodeBlock :global(.token.tag),
+.darkCodeBlock :global(.token.constant),
+.darkCodeBlock :global(.token.symbol),
+.darkCodeBlock :global(.token.deleted) {
+  color: #ff79c6 !important;
+}
+
+.darkCodeBlock :global(.token.boolean),
+.darkCodeBlock :global(.token.number) {
+  color: #bd93f9 !important;
+}
+
+.darkCodeBlock :global(.token.selector),
+.darkCodeBlock :global(.token.attr-name),
+.darkCodeBlock :global(.token.string),
+.darkCodeBlock :global(.token.char),
+.darkCodeBlock :global(.token.builtin),
+.darkCodeBlock :global(.token.inserted) {
+  color: #f1fa8c !important;
+}
+
+.darkCodeBlock :global(.token.operator),
+.darkCodeBlock :global(.token.entity),
+.darkCodeBlock :global(.token.url),
+.darkCodeBlock :global(.language-css .token.string),
+.darkCodeBlock :global(.style .token.string),
+.darkCodeBlock :global(.token.variable) {
+  color: #f8f8f2 !important;
+}
+
+.darkCodeBlock :global(.token.atrule),
+.darkCodeBlock :global(.token.attr-value),
+.darkCodeBlock :global(.token.function),
+.darkCodeBlock :global(.token.class-name) {
+  color: #50fa7b !important;
+}
+
+.darkCodeBlock :global(.token.keyword) {
+  color: #ff79c6 !important;
+}
+
+.darkCodeBlock :global(.token.regex),
+.darkCodeBlock :global(.token.important) {
+  color: #ffb86c !important;
+}
+
+.darkCodeBlock :global(.token.namespace) {
+  color: #f8f8f2 !important;
+}
+
+.darkCodeBlock :global(.plain-text),
+.darkCodeBlock :global(.token.plain-text) {
+  color: #f8f8f2 !important;
+}
+
+/* Fallback for any unmatched tokens */
+.darkCodeBlock :global(.token) {
+  color: #f8f8f2 !important;
+}

@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Slim Framework',
+  title: 'Slim',
   tagline: 'a micro framework for PHP',
   favicon: 'img/favicon.png',
 
