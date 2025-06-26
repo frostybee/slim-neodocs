@@ -72,7 +72,8 @@ const config = {
           },
         },
         blog: {
-          showReadingTime: true,
+          showReadingTime: true,          
+          postsPerPage: 20, //NOTE: set to 'ALL' if you want to show all posts on main blog page instead of archiving.
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,

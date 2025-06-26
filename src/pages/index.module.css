@@ -289,7 +289,7 @@
 .darkCodeBlock :global(.token.function),
 .darkCodeBlock :global(.token.class-name) {
   color: #50fa7b !important;
-}
+} 
 
 .darkCodeBlock :global(.token.keyword) {
   color: #ff79c6 !important;
