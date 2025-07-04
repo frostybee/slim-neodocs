@@ -40,3 +40,32 @@ code {
   white-space: pre-wrap;
   word-break: break-word;
 }
+
+/* Table of Contents styling */
+.table-of-contents__link {
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin: 2px 0;
+  display: block;
+}
+
+.table-of-contents__link:hover {
+  background-color: rgba(var(--ifm-color-primary-rgb), 0.05);
+  color: var(--ifm-color-primary);
+  transform: translateX(2px);
+}
+
+.table-of-contents__link--active {
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+  border-left: 3px solid var(--ifm-color-primary);
+  padding-left: 8px;
+  margin-left: -8px;
+  background-color: rgba(var(--ifm-color-primary-rgb), 0.1);
+}
+
+.table-of-contents__link--active code {
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+}
