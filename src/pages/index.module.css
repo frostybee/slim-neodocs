@@ -71,10 +71,12 @@
 .siteSlogan {
   font-size: 1.5rem;
   color: var(--ifm-font-color-base);
-  font-weight: 300;
+  font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
 }
 
 .leadText {
